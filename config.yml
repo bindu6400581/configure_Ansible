@@ -1,0 +1,11 @@
+- name: Copy httpd configuration file
+copy: src=files/httpd.original dest=/etc/httpd/conf/httpd.conf
+- name: Copy index.html file
+copy: src=files/index.html dest==/var/www/html
+notify:
+- restart roledemo
+--- --
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
